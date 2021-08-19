@@ -24,5 +24,29 @@ namespace ITMO21.WPF.Lab03.ex2_3
         {
             InitializeComponent();
         }
+
+        private void StackPanel_Click(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement feSource = e.Source as FrameworkElement;
+            double a = double.Parse(txtBox.Text);
+
+            switch (feSource.Name)
+            {
+                case "butAdd":
+                    a += a;
+                    break;
+                case "butMult":
+                    a *= a;
+                    break;
+                case "butSqrt":
+                    a = Math.Sqrt(a);
+                    break;
+            }
+
+            e.Handled = true;
+
+            txtBox.Text = string.Format("{0:#.##}", a);
+
+        }
     }
 }

@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ITMO21.WPF.Lab03.ex2_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Calculate" Height="200" Width="400">
     <Grid>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Center" Margin="0,133,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <StackPanel ButtonBase.Click="StackPanel_Click" HorizontalAlignment="Left" Margin="150,40,0,0"
+                    VerticalAlignment="Top" Width="100">
+            <Button x:Name="butAdd" Content="x+x"/>
+            <Button x:Name="butMult" Content="x*x"/>
+            <Button x:Name="butSqrt" Content="√"/>
+        </StackPanel>
 
     </Grid>
 </Window>
