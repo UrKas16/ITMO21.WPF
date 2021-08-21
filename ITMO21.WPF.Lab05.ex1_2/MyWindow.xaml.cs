@@ -51,8 +51,12 @@ namespace ITMO21.WPF.Lab05.ex1_2
             {
                 wdn1.setText.Text = textBox.Text;
                 PrintLogFile();
+                if (textBox.Text != "")
+                {
+                    Close();
+                }
             }
-            Close();
+            
         }
 
         private void Window_Closed(object sender, EventArgs e)
