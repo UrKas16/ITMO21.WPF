@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:ITMO21.WPF.Lab05.ex1_2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <LinearGradientBrush x:Key="gradientStyle" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Gray" Offset="0"/>
+            <GradientStop Color="Green" Offset="0.5"/>
+            <GradientStop Color="LawnGreen" Offset="1"/>
+        </LinearGradientBrush>
     </Application.Resources>
 </Application>
