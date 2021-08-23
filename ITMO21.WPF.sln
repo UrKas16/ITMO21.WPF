@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITMO21.WPF.Lab05.ex1_2", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO21.WPF.Lab06.ex1_2", "ITMO21.WPF.Lab06.ex1_2\ITMO21.WPF.Lab06.ex1_2.csproj", "{B6369123-C212-4034-88F4-093E7FF5E900}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO21.WPF.Lab07.ex1_2", "ITMO21.WPF.Lab07.ex1_2\ITMO21.WPF.Lab07.ex1_2.csproj", "{7EA136B6-09A4-46E5-BBEF-B4DB5D75169B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B6369123-C212-4034-88F4-093E7FF5E900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6369123-C212-4034-88F4-093E7FF5E900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6369123-C212-4034-88F4-093E7FF5E900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA136B6-09A4-46E5-BBEF-B4DB5D75169B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA136B6-09A4-46E5-BBEF-B4DB5D75169B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA136B6-09A4-46E5-BBEF-B4DB5D75169B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA136B6-09A4-46E5-BBEF-B4DB5D75169B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
