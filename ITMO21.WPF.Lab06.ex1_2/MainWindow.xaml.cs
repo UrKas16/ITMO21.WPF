@@ -37,6 +37,7 @@ namespace ITMO21.WPF.Lab06.ex1_2
             lbl.Content = "Добрый день!";
             setBut.IsEnabled = false;
             retBut.IsEnabled = false;
+            New_Win.IsEnabled = false;
             Top = 25;
             Left = 25;
         }
@@ -176,9 +177,6 @@ namespace ITMO21.WPF.Lab06.ex1_2
             if (myWin == null && check.IsChecked == true)
             {
                 myWin = new MyWindow();
-            }
-            try
-            {
                 myWin.Owner = this;
                 myWin.Top = this.Top;
                 myWin.Left = this.Left + this.Width;
@@ -187,10 +185,11 @@ namespace ITMO21.WPF.Lab06.ex1_2
                 //myWin.Top = location.Y;
                 myWin.Show();
             }
-            catch (NullReferenceException ex)
-            {
-                MessageBox.Show(ex.Message);                
-            }            
+        }
+
+        private void check_Click(object sender, RoutedEventArgs e)
+        {
+            if (check.IsEnabled) New_Win.IsEnabled = true;
         }
     }
 }

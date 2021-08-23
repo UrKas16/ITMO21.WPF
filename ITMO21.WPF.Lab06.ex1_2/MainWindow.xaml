@@ -19,6 +19,11 @@
             <Setter Property="BorderBrush" Value="Red"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Padding" Value="5,3,3,5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style TargetType="StatusBarItem">
             <Setter Property="FontSize" Value="11"/>
@@ -28,6 +33,41 @@
         <Style BasedOn="{StaticResource {x:Type StatusBarItem}}" TargetType="StatusBarItem" x:Key="headerText">
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="FontTextBox">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Calibri"></Setter>
+                <Setter Property="Control.FontSize" Value="14"></Setter>
+                <Setter Property="TextBox.VerticalContentAlignment" Value="Center"/>
+            </Style.Setters>
+            <!-- Тригеры для текстового поля, при наведении поле увеличивается-->
+            <Style.Triggers>
+                <!--<Trigger Property="Control.IsFocused" Value="True">
+                    <Setter Property="Control.Foreground" Value="Red"/>
+                    <Setter Property="TextBox.BorderBrush" Value="Blue"/>
+                    <Setter Property="Control.FontSize" Value="18"/>
+                    <Setter Property="TextBox.BorderThickness" Value="3"/>
+                </Trigger>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Foreground" Value="Red"></Setter>
+                    <Setter Property="TextBox.BorderBrush" Value="Blue"></Setter>
+                    <Setter Property="Control.FontSize" Value="18"></Setter>
+                    <Setter Property="TextBox.BorderThickness" Value="3"></Setter>
+                </Trigger>-->
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Control.IsMouseOver" Value="True"/>
+                        <Condition Property="Control.IsFocused" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                        <Setter Property="TextBox.BorderBrush" Value="Blue"/>
+                        <Setter Property="ItemsControl.FontSize" Value="18"/>
+                        <Setter Property="TextBox.BorderThickness" Value="3"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+
+            </Style.Triggers>
         </Style>
     </Window.Resources>
     <DockPanel>
@@ -55,7 +95,7 @@
                 <TextBlock></TextBlock>
             </StatusBarItem>
             <StatusBarItem x:Name="stb4">
-                <CheckBox x:Name="check">Разрешить открытие формы</CheckBox>
+                <CheckBox x:Name="check" Click="check_Click">Разрешить открытие формы</CheckBox>
             </StatusBarItem>
         </StatusBar>
         <Grid Button.Click ="Grid_Click">
@@ -73,7 +113,7 @@
             <Button x:Name="retBut" Content="Ret But" HorizontalAlignment="Left" Margin="10,15" VerticalAlignment="Top" Width="75"
                     Grid.Column="0" Grid.Row="1"/>
             <TextBox x:Name="setText" HorizontalAlignment="Stretch" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
-                     TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Margin="10,15" TextChanged="setText_TextChanged"
+                     TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource ResourceKey=FontTextBox}" TextChanged="setText_TextChanged"
                      Grid.Column="1" Grid.Row="0" Background="{StaticResource MyBrush}"/>
             <Label x:Name="retLabel" Grid.Column="1" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="10,15" VerticalAlignment="Top"/>
             <Button x:Name="New_Win" Content="New Win" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="10,15" 

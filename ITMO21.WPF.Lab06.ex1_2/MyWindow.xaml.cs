@@ -61,7 +61,18 @@ namespace ITMO21.WPF.Lab06.ex1_2
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            wdn1.myWin = null;
+            if (wdn1.myWin != null)
+            {
+                try
+                {
+                    wdn1.myWin = null;
+                }
+                catch (NullReferenceException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
+            }          
         }
 
         private void PrintLogFile()
