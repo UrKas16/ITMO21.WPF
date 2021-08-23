@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:ITMO21.WPF.Lab07.ex1_2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="C:\Users\kasyu\source\repos\ITMO21.WPF\ITMO21.WPF.Lab07.ex1_2\ShinyBlue.xaml"/>
+        <!--<ResourceDictionary Source="C:\Users\kasyu\source\repos\ITMO21.WPF\ITMO21.WPF.Lab07.ex1_2\ShinyBlue.xaml"/>-->
+        <ResourceDictionary Source="MyDictionary.xaml"/>
     </Application.Resources>
 </Application>

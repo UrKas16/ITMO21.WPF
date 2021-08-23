@@ -6,7 +6,8 @@
         xmlns:push="clr-namespace:ITMO21.WPF.Lab07.ex1_2"
         mc:Ignorable="d"        
         Title="Первая прога на XAML" Height="500" Width="600" MinHeight="300" MinWidth="350" 
-            WindowStartupLocation="Manual" Closing="Window_Closing" WindowStyle="ThreeDBorderWindow">
+            WindowStartupLocation="Manual" Closing="Window_Closing" WindowStyle="ThreeDBorderWindow"
+        Background="{StaticResource gradientStyle}">
     <Window.Resources>
         <SolidColorBrush x:Key="MyBrush" Color="Gold"/>        
         <Style TargetType="Button">
