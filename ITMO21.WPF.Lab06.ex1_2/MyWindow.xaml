@@ -28,14 +28,31 @@
                             </Rectangle>
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Name="Storyboard">
+                                        <Storyboard Duration="0:0:1">
+                                            <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="100"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="100"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <StopStoryboard BeginStoryboardName="Storyboard"/>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
     </Window.Resources>
-            <Grid>
+    <Grid>
         <Button Content="Вау!!!" HorizontalAlignment="Left" Margin="55,0,0,0" Height="70" Width="170" VerticalAlignment="Center" Click="Button_Click"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="285,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="80" Width="120"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="285,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="80" Width="120"/>
 
     </Grid>
 </Window>
