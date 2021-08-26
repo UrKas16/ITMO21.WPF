@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ITMO21.WPF.Lab07.ex1_2"
         mc:Ignorable="d"
-        Title="MyWindow" Height="350" Width="500" Closing="Window_Closing" Closed="Window_Closed">
+        Title="MyWindow" Height="350" Width="500" Closing="Window_Closing" Closed="Window_Closed"
+        Background="{StaticResource gradientStyle}">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -51,7 +52,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button Content="Вау!!!" HorizontalAlignment="Left" Margin="55,0,0,0" Height="70" Width="170" VerticalAlignment="Center" Click="Button_Click"/>
+        <Button Content="Вау!!!" HorizontalAlignment="Left" Margin="55,0,0,0" Height="70" Width="170" VerticalAlignment="Center" Click="Button_Click" Template="{DynamicResource customButtonTemplate}"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="285,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="80" Width="120"/>
 
     </Grid>
